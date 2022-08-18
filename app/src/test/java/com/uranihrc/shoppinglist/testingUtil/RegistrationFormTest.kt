@@ -16,7 +16,7 @@ class RegistrationFormTest{
 
     @Test
     fun `valid username and password returns true`() {
-        val result = RegistrationForm.registerUser("Mark",
+        val result = RegistrationForm.registerUser("Dea",
             "12345678",
             "12345678")
 
@@ -25,7 +25,7 @@ class RegistrationFormTest{
 
     @Test
     fun `username taken returns false`() {
-        val result = RegistrationForm.registerUser("Zaid",
+        val result = RegistrationForm.registerUser("Uran",
             "12345678",
             "12345678")
 
@@ -34,7 +34,7 @@ class RegistrationFormTest{
 
     @Test
     fun `password format incorrect returns false`() {
-        val result = RegistrationForm.registerUser("Mark",
+        val result = RegistrationForm.registerUser("Dea",
             "123",
             "123")
 
@@ -43,9 +43,9 @@ class RegistrationFormTest{
 
     @Test
     fun `password should match returns false`() {
-        val result = RegistrationForm.registerUser("Mark",
-            "123",
-            "323")
+        val result = RegistrationForm.registerUser("Dea",
+            "12345678",
+            "00000000")
 
         assertThat(result).isFalse()
     }

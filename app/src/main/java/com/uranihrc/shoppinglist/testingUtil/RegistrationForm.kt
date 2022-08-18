@@ -10,14 +10,14 @@ package com.uranihrc.shoppinglist.testingUtil
  */
 object RegistrationForm {
 
-    private val existingUser = listOf("Zaid","Zakir")
+    private val existingUser = listOf("Uran","Berisha")
 
     fun registerUser(
         userName:String,
         password:String,
         confirmPassword:String
     ):Boolean{
-        if (existingUser.contains(userName) || userName.isNullOrEmpty()){
+        if (existingUser.contains(userName) || userName.isEmpty()){
             return false
         }
         if (password.length < 8){
