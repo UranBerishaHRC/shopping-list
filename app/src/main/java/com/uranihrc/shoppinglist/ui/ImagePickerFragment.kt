@@ -57,7 +57,6 @@ class ImagePickerFragment @Inject constructor(
 
     private fun subscribeToObservers() {
         shoppingViewModel.image.observe(viewLifecycleOwner, Observer {
-            //TODO change spelling of contentifhandled
             it?.contentIfHandled()?.let { result ->
                 when(result.status) {
                     Status.SUCCESS -> {
